@@ -1,0 +1,26 @@
+output:
+  folder: output/acc_vs_loss/mnist_sgd_uniform_02
+  target_model_count: 2000
+dataset:
+  name: mnist
+  mnistcifar:
+    num_classes: 2
+    classes: "0,7"
+model:
+  arch: lenet
+  lenet:
+    width: 0.5
+  model_count_times_batch_size: 60000 # Was 20000 , (before 200)
+  normalization: lipschitz
+  init: uniform_02
+optimizer:
+  name: SGD
+  lr: 0.01
+  epochs: 60
+  batch_size: 2
+  es_acc: 1.0
+distributed:
+  loss_thres: "-999,999"
+  num_samples: "16"
+  data_seed: 0
+  target_model_count_subrun: 10

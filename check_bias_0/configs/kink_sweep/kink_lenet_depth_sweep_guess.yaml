@@ -1,0 +1,23 @@
+dataset:
+  name: kink
+  kink:
+    margin: 0.25
+    noise: 0.0
+model:
+  arch: lenet
+  lenet:
+    width: 1.0          # fixed width for depth sweep; overridden by CLI
+    layers: 4           # overridden by CLI: 4=2c-3f, 3=2c-2f, 2=2c-1f, 1=1c-1f
+  model_count_times_batch_size: 80000
+  init: uniform         # overridden by CLI
+optimizer:
+  name: guess
+distributed:
+  loss_thres: "-999,999"
+  data_seed: 0
+  training_seed: 0
+  target_model_count_subrun: 50000
+  num_samples: "16"
+output:
+  folder: output/kink_lenet/placeholder   # overridden by CLI
+  target_model_count: 50000

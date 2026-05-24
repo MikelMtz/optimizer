@@ -1,0 +1,217 @@
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>KINK</th>
+      <th>MNIST</th>
+      <th>CIFAR</th>
+    </tr>
+    <tr>
+      <th>Estimator</th>
+      <th>Params</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="4" valign="top">KNN</th>
+      <th>k=5</th>
+      <td>1.00</td>
+      <td>5.00</td>
+      <td>3072.00</td>
+    </tr>
+    <tr>
+      <th>k=10</th>
+      <td>1.00</td>
+      <td>3.00</td>
+      <td>2.00</td>
+    </tr>
+    <tr>
+      <th>k=20</th>
+      <td>1.00</td>
+      <td>3.00</td>
+      <td>9.00</td>
+    </tr>
+    <tr>
+      <th>k=40</th>
+      <td>2.00</td>
+      <td>2.00</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">CorrInt</th>
+      <th>k1=5,k2=15</th>
+      <td>1.92</td>
+      <td>8.51</td>
+      <td>7.72</td>
+    </tr>
+    <tr>
+      <th>k1=10,k2=20</th>
+      <td>1.89</td>
+      <td>8.17</td>
+      <td>7.62</td>
+    </tr>
+    <tr>
+      <th>k1=20,k2=40</th>
+      <td>1.85</td>
+      <td>7.75</td>
+      <td>7.38</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">DANCo</th>
+      <th>k=5</th>
+      <td>2.00</td>
+      <td>782.93</td>
+      <td>3068.01</td>
+    </tr>
+    <tr>
+      <th>k=10</th>
+      <td>2.00</td>
+      <td>781.29</td>
+      <td>3072.00</td>
+    </tr>
+    <tr>
+      <th>k=20</th>
+      <td>2.00</td>
+      <td>783.27</td>
+      <td>3061.76</td>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">MiND_ML</th>
+      <th>k=10,MLk</th>
+      <td>2.00</td>
+      <td>10.00</td>
+      <td>10.00</td>
+    </tr>
+    <tr>
+      <th>k=10,MLi</th>
+      <td>2.00</td>
+      <td>10.00</td>
+      <td>10.00</td>
+    </tr>
+    <tr>
+      <th>k=20,MLk</th>
+      <td>2.00</td>
+      <td>10.00</td>
+      <td>10.00</td>
+    </tr>
+    <tr>
+      <th>k=20,MLi</th>
+      <td>2.00</td>
+      <td>10.00</td>
+      <td>10.00</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">MLE</th>
+      <th>K=5,Haro</th>
+      <td>1.95</td>
+      <td>11.12</td>
+      <td>20.11</td>
+    </tr>
+    <tr>
+      <th>K=10,Haro</th>
+      <td>1.95</td>
+      <td>11.12</td>
+      <td>20.11</td>
+    </tr>
+    <tr>
+      <th>K=20,Haro</th>
+      <td>1.95</td>
+      <td>11.12</td>
+      <td>20.11</td>
+    </tr>
+    <tr>
+      <th>K=10,guar.conv</th>
+      <td>1.95</td>
+      <td>11.12</td>
+      <td>20.11</td>
+    </tr>
+    <tr>
+      <th>K=10,iter</th>
+      <td>ERR: integral_approximation='iteration' not im...</td>
+      <td>ERR: integral_approximation='iteration' not im...</td>
+      <td>ERR: integral_approximation='iteration' not im...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">lPCA</th>
+      <th>FO</th>
+      <td>2.00</td>
+      <td>16.00</td>
+      <td>10.00</td>
+    </tr>
+    <tr>
+      <th>ratio</th>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+    </tr>
+    <tr>
+      <th>maxgap</th>
+      <td>1.00</td>
+      <td>574.00</td>
+      <td>1999.00</td>
+    </tr>
+    <tr>
+      <th>Kaiser</th>
+      <td>1.00</td>
+      <td>72.00</td>
+      <td>143.00</td>
+    </tr>
+    <tr>
+      <th>broken_stick</th>
+      <td>1.00</td>
+      <td>36.00</td>
+      <td>54.00</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">TwoNN</th>
+      <th>discard=0.05</th>
+      <td>1.91</td>
+      <td>12.96</td>
+      <td>26.04</td>
+    </tr>
+    <tr>
+      <th>discard=0.10</th>
+      <td>1.91</td>
+      <td>12.98</td>
+      <td>27.03</td>
+    </tr>
+    <tr>
+      <th>discard=0.25</th>
+      <td>1.93</td>
+      <td>13.07</td>
+      <td>28.03</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">ESS</th>
+      <th>ver=a</th>
+      <td>1.97</td>
+      <td>16.84</td>
+      <td>25.02</td>
+    </tr>
+    <tr>
+      <th>ver=b</th>
+      <td>1.95</td>
+      <td>16.54</td>
+      <td>25.47</td>
+    </tr>
+  </tbody>
+</table>
+</div>
