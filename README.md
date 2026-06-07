@@ -1,11 +1,7 @@
-# Loss Landscapes are All You Need: Neural Network Generalization Can Be Explained Without the Implicit Bias of Gradient Descent
+## Generalisation in Overparameterised Neural Networks: Architectural and Optimisation Bias
 
-This repository trains large number of models in parallel with non-gradient based optimizers.
+This is the Public repository with all the training and plotting scripts used throguhout the work. 
 
-To set up the environment, you could use conda with `conda env create -f environment.yml`
+*nonzero_bias_trainings*: This folder contains the experiments where the bias was not set to zero throuhout the trainings.
 
-All scripts for reproducing the tables in the paper ["Loss Landscapes are All You Need: Neural Network Generalization Can Be Explained Without the Implicit Bias of Gradient Descent"](https://openreview.net/forum?id=QC10RmRbZy9)) - ICLR 2023 can be found in `./scripts`. 
-
-`train_distributed.py` trains models in parallel on different host and then save the resulting metrics in a single shared sqllite database.
-
-
+*setting_bias_to_0_trainings*: This folder contains the majority ofthe experiments, where the bias was set to zero.
